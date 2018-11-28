@@ -6,7 +6,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 """  # done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
-# TODO: 2.
+# done: 2.
 #   Locate the syntax (notation) errors in this file
 #   by looking for red underlines.
 #
@@ -31,7 +31,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 ###############################################################################
 
 import rosegraphics as rg
-
+import math
 
 def main():
     """ Calls the other functions in this module to demo them. """
@@ -41,29 +41,26 @@ def main():
 
 def print_math():
     """ Prints some calculated values. """
-    x = cos(pi)
+    x = math.cos(math.pi)
     print(x)
 
-    y = sin(pi)
-    print(The sine of PI is, y)
+    y = math.sin(math.pi)
+    print(y)
 
 def turtle():
-    # Constructs a TurtleWindow,
-    #constructs a classic SimpleTurtle and asks it to do some things,
-    #and waits for the user to click anywhere in the window to close it.
+    # done:Constructs a TurtleWindow,
+    # constructs a classic SimpleTurtle and asks it to do some things,
+    # and waits for the user to click anywhere in the window to close it.
 
     window = rg.TurtleWindow()
-
     alan = rg.SimpleTurtle()
-alan.pen = rg.Pen('blue', 30)
+    alan.pen = rg.Pen('blue', 30)
     alan.paint_bucket = rg.PaintBucket('yellow')
-
-    alan.back(3 * (47 + 16)
-    al.begin_fill()
-    alan.circle(25)
+    alan.backward(3 * (47 + 16))
+    alan.begin_fill()
+    alan.draw_circle(25)
     alan.end_fill()
-
-    forward(200)
+    alan.forward(200)
 
     window.close_on_mouse_click()
 
